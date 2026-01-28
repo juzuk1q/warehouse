@@ -63,7 +63,6 @@ class _CardWhState extends State<CardWh> {
       decoration: BoxDecoration(
         color: Color(0xffFFFFFF),
         borderRadius: .circular(10),
-        border: .all(color: Color(0xff000000)),
       ),
       child: Column(
         children: [

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'full.dart';
 
 class Product extends StatefulWidget {
   const Product({super.key});
@@ -9,6 +11,8 @@ class Product extends StatefulWidget {
 
 class _ProductState extends State<Product> {
   bool isTrue = false;
+  Timer? _timer;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +46,9 @@ class _ProductState extends State<Product> {
                   onPressed: () {
                     setState(() {
                       isTrue = true;
+                    });
+                    _timer = Timer(Duration(seconds: 2), () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => fullPage()));
                     });
                   },
                   style: ElevatedButton.styleFrom(

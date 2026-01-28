@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:warehouse/card.dart';
 import 'package:warehouse/EmptyPage.dart';
 
 void main() {
